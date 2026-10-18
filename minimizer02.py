@@ -1,10 +1,6 @@
 import sympy as sp
 from collections import deque
 
-# ==========================================
-# 1. Gate Definitions
-# ==========================================
-
 def get_cnot_01():
     return sp.Matrix([
         [1, 0, 0, 0],
@@ -36,10 +32,6 @@ def get_swap_target():
         [0, 0, 0, 1]
     ])
 
-# ==========================================
-# 2. Helper Functions (Flattening the logic)
-# ==========================================
-
 def hash_matrix(matrix):
     # Sympy matrices must be converted to tuples to be used as dictionary keys
     return tuple(matrix)
@@ -69,9 +61,6 @@ def expand_state(current_matrix, current_sequence, basis_gates, queue, visited_d
         new_sequence.append(gate_name)
         queue.append((new_matrix, new_sequence))
 
-# ==========================================
-# 3. Generalised Search Algorithm
-# ==========================================
 
 def find_all_minimum_sequences(target_matrix, basis_gates, max_search_depth=5):
     # Setup initial state (Identity matrix)
@@ -107,10 +96,6 @@ def find_all_minimum_sequences(target_matrix, basis_gates, max_search_depth=5):
         expand_state(current_matrix, current_sequence, basis_gates, queue, visited_depths)
         
     return solutions
-
-# ==========================================
-# 4. Main Execution
-# ==========================================
 
 print("Starting generalised quantum circuit synthesiser...\n")
 
