@@ -1,5 +1,3 @@
-\usepackage{amsmath}
-
 # Quantum Simulation of Hamiltonian Time Evolution
 
 Project Description
@@ -52,7 +50,7 @@ Using Finite Differences
 
 $$  \left. \frac{d^2\psi}{dx^2} \right|_{x_j}   \approx \frac{\psi_{j+1} + \psi_{j-1} - 2 \psi_{j} }{ (\Delta x)^2 } $$
 
-Taking Spatial Domain $ x \in [-2,2] $ with $4$ Grid Points equally spaced
+Taking Spatial Domain $x \in [-2,2]$ with $4$ Grid Points equally spaced
 
 $x_0=-1.5, \ x_1=-0.5, \ x_2=0.5, \ \ x_3=1.5   $
 
@@ -104,7 +102,9 @@ $$ V(x_3=1.5)  = \frac{9}{4} $$
 
 Thus we can write as
 
-$$ [\hat V]  = \begin{bmatrix}  \frac{9}{4} & 0 & 0 & 0 \\ 0 & \frac{1}{4} & 0 & 0 \\ 0 & 0 &  \frac{1}{4} & 0 \\ 0 & 0 & 0 & \frac{9}{4} \end{bmatrix}  $$
+```math
+[\hat V]  = \begin{bmatrix}  \frac{9}{4} & 0 & 0 & 0 \\ 0 & \frac{1}{4} & 0 & 0 \\ 0 & 0 &  \frac{1}{4} & 0 \\ 0 & 0 & 0 & \frac{9}{4} \end{bmatrix}
+```
 
 Hence Hamiltonian can be written as :
 
@@ -112,7 +112,9 @@ $$ [\hat H] = [\hat T] + [\hat V] $$
 
 Taking $\hbar = 1 \ unit$ and $2 m = 1 \ unit$ for demonstration purpose. We have
 
-$$ [\hat H] = \begin{bmatrix}  \frac{17}{4} & -1 & 0 & 0 \\ -1 & \frac{9}{4} & 0 & 0 \\ 0 & 0 &  \frac{9}{4} & -1 \\ 0 & 0 & -1 & \frac{17}{4} \end{bmatrix} $$
+```math
+[\hat H] = \begin{bmatrix}  \frac{17}{4} & -1 & 0 & 0 \\ -1 & \frac{9}{4} & 0 & 0 \\ 0 & 0 &  \frac{9}{4} & -1 \\ 0 & 0 & -1 & \frac{17}{4} \end{bmatrix}
+```
 
 ### (3) Expansion of Hamiltonian in terms of Pauli's Operators
 
@@ -120,7 +122,7 @@ By Pauli Decomposition
 
 The Hamiltonian $(2^n \times 2^n)$ can be expanded in terms of Basis Pauli Matrices
 
-Let $ P_k \in \{I, X, Y, Z\}^{\otimes \ n} $
+Let $P_k \in \{I, X, Y, Z\}^{\otimes \ n}$
 
 $$ \hat H = \sum_{k=1}^{4^n} c_k P_k $$
 
@@ -159,7 +161,7 @@ In matrix from we write
 
 $$ [\hat{U}(t)] = e^{- \frac{i}{\hbar} [\hat{H}] t} $$
 
-The Operator $\hat U $ is Unitary if & only if $\hat H$ is Hermitian. (which is True in our case)
+The Operator $\hat U$ is Unitary if & only if $\hat H$ is Hermitian. (which is True in our case)
 
 Applying the Pauli Decomposition (For our case), we get
 
