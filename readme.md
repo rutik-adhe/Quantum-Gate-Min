@@ -1,3 +1,4 @@
+\usepackage{amsmath}
 
 # Quantum Simulation of Hamiltonian Time Evolution
 
