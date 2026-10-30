@@ -64,7 +64,9 @@ $\psi_{-1} = 0$ and $\psi_{4}=0$
 
 Then We Let Spatial Wave Function to be a column vector of 4 entries corresponding to the values at each grid point 
 
-$$ \vec{\psi} = \begin{pmatrix}\psi_0 \\ \psi_1 \\ \psi_2 \\ \psi_3 \end{pmatrix} $$
+```math 
+\vec{\psi} = \begin{pmatrix}\psi_0 \\ \psi_1 \\ \psi_2 \\ \psi_3 \end{pmatrix}
+```
 
 Then Using the finite difference equations
 
@@ -78,13 +80,19 @@ $$  \left. \frac{d^2\psi}{dx^2} \right|_{x_3}   \approx \frac{\psi_{4} + \psi_{2
 
 Thus we can write as
 
-$$  \frac{d^2 }{dx^2} \vec{\psi} = \begin{bmatrix} \psi_{1} - 2 \psi_{0} \\ \psi_{2} +\psi_{0} - 2 \psi_{1} \\ \psi_{3} + \psi_{1} - 2\psi_{2} \\ \psi_{2} - 2\psi_{3} \end{bmatrix} $$
+```math 
+\frac{d^2 }{dx^2} \vec{\psi} = \begin{bmatrix} \psi_{1} - 2 \psi_{0} \\ \psi_{2} +\psi_{0} - 2 \psi_{1} \\ \psi_{3} + \psi_{1} - 2\psi_{2} \\ \psi_{2} - 2\psi_{3} \end{bmatrix}
+```
 
-$$ \frac{d^2 }{dx^2} \vec{\psi} = \begin{bmatrix} -2 & 1 & 0 & 0 \\ 1 & -2 & 1 & 0 \\ 0 & 1 & -2 & 1 \\ 0 & 0 & 1 & -2 \end{bmatrix} \vec{\psi} $$
+```math 
+\frac{d^2 }{dx^2} \vec{\psi} = \begin{bmatrix} -2 & 1 & 0 & 0 \\ 1 & -2 & 1 & 0 \\ 0 & 1 & -2 & 1 \\ 0 & 0 & 1 & -2 \end{bmatrix} \vec{\psi}
+```
 
 Hence the Discrete Matrix form of Kinetic Energy Operator is
 
-$$ [\hat T] = \frac{\hbar^2}{2m} \begin{bmatrix} 2 & -1 & 0 & 0 \\ -1 & 2 & -1 & 0 \\ 0 & -1 & 2 & -1 \\ 0 & 0 & -1 & 2 \end{bmatrix} $$
+```math 
+[\hat T] = \frac{\hbar^2}{2m} \begin{bmatrix} 2 & -1 & 0 & 0 \\ -1 & 2 & -1 & 0 \\ 0 & -1 & 2 & -1 \\ 0 & 0 & -1 & 2 \end{bmatrix}
+```
 
 Similarly, Discretizing the Potential we have
 
